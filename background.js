@@ -9,8 +9,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                 sendResponse('No text highlighted');
                 return true;
             };
-            const { API_KEY, API_URL, PROMPT_TEMPLATE } = await getObjectFromLocalStorage(['API_KEY', 'API_URL', 'PROMPT_TEMPLATE']);
-            const prompt = PROMPT_TEMPLATE.replace(/\$\{([^}]+)\}/g, (match, varName) => highLightedText);
+            const { API_KEY, API_URL, PROMPT_TEMPLATE, RESPONSE_FORMAT } = await getObjectFromLocalStorage(['API_KEY', 'API_URL', 'PROMPT_TEMPLATE', 'RESPONSE_FORMAT']);
+            const prompt = PROMPT_TEMPLATE.replace(/\$\{([^}]+)\}/g, (match, varName) => highLightedText) + " " + RESPONSE_FORMAT;
             callGPTAPI(API_KEY, API_URL, prompt).then((response) => {
                 console.log('ChatGPT response', response);
                 sendResponse(response);

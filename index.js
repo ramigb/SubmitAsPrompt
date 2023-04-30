@@ -4,8 +4,8 @@ import { getObjectFromLocalStorage, saveTextAsFile } from './utils.js';
 document.addEventListener('DOMContentLoaded', async() => {
     console.log(snarkdown)
     document.getElementById('submitBtn').addEventListener('click', submitSelected);
-    const PROMPT_TEMPLATE = await getObjectFromLocalStorage('PROMPT_TEMPLATE');
-    document.getElementById('gptResponse').innerHTML = 'Prompt template: ' + PROMPT_TEMPLATE;
+    const { PROMPT_TEMPLATE, RESPONSE_FORMAT } = await getObjectFromLocalStorage(['PROMPT_TEMPLATE', 'RESPONSE_FORMAT']);
+    document.getElementById('gptResponse').innerHTML = 'Prompt template: ' + PROMPT_TEMPLATE + " " + RESPONSE_FORMAT;
 });
 
 async function getCurrentTab() {

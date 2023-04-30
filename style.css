@@ -21,7 +21,8 @@ body {
     font-size: 16px;
 }
 
-#PROMPT_TEMPLATE {
+#PROMPT_TEMPLATE,
+#RESPONSE_FORMAT {
     width: 500px;
     height: 200px;
 }
