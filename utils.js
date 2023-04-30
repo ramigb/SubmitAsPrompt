@@ -1,4 +1,4 @@
-export async function callGPTAPI(API_KEY, API_URL, prompt) {
+export async function callGPTAPI(API_KEY, API_MODEL, API_URL, prompt) {
     if (!API_KEY || !API_URL) {
         throw new Error('API_KEY or API_URL not found in local storage');
     }
@@ -9,7 +9,7 @@ export async function callGPTAPI(API_KEY, API_URL, prompt) {
             'Authorization': `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
-            "model": "gpt-3.5-turbo",
+            "model": API_MODEL,
             "messages": [{ "role": "user", "content": prompt }],
             "temperature": 0.7
         })

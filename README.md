@@ -13,6 +13,8 @@ Is a very simply chrome extension that allows you to submit highlighted text fro
 1. Allow response feedback (e.g. the user can submit change requests back to GPT)
 2. Enable caching
 3. Save multiple templates and choose between them when sending highlighted text
+4. Customize API request parameters 
+5. Clean the code (LOL)
 
 
 ## Maybe
