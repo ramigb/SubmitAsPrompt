@@ -9,6 +9,10 @@ Is a very simply chrome extension that allows you to submit highlighted text fro
 3. Make sure Developer mode is turned on
 4. Click "Load unpacked" and select the cloned repo
 
+## How to use
+The extension is pretty straight forward just make sure you go to the extension options first -Dev TODO: Open it after installation- add your API key and add the prompt and response format you want. The most important thing is the prompt template should contain the following string \${highLightedText} (AS IS) an example would be: 
+``ELI5 "${highLightedText}"`` or ``Reverse the following text "${highLightedText}"`` the response formation portion of the options is basically another string that would be appended to the template I separated them so you can maintain the same format e.g. Markdown if you want, a simple example would be ``respond in Markdown format``
+
 ## TODO
 1. Allow response feedback (e.g. the user can submit change requests back to GPT)
 2. Enable caching
