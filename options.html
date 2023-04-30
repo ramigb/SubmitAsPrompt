@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="pure-min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Options page</title>
+</head>
+
+<body class="optionsPage">
+    <img id="logo" src="logo.png" alt="Logo">
+    <p id="status"></p>
+    <form class="pure-form pure-form-aligned">
+        <div class="pure-control-group">
+            <label for="API_KEY-name">API KEY</label>
+            <input type="password" id="API_KEY" placeholder="API Key">
+        </div>
+        <div class="pure-control-group">
+            <label for="API_URL-name">API URL</label>
+            <input type="text" id="API_URL" placeholder="API URL">
+        </div>
+        <div class="pure-control-group">
+            <label for="PROMPT_TEMPLATE-name">Prompt Template</label>
+            <textarea id="PROMPT_TEMPLATE" placeholder="Prompt Template"></textarea>
+        </div>
+    </form>
+    <button id="saveOptionsBtn">Save</button>
+    <script src="options.js"></script>
+</body>
+
+</html>

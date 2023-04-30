@@ -1,0 +1,23 @@
+{
+    "name": "SubmitAsPrompt",
+    "description": "Submit web page as a prompt to GPT",
+    "version": "1.0",
+    "manifest_version": 3,
+    "options_page": "options.html",
+    "host_permissions": ["https://*/*"],
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs",
+        "storage"
+    ],
+    "action": {
+        "default_title": "Click to show an alert",
+        "default_popup": "index.html",
+        "default_icon": "logo.png"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    }
+}

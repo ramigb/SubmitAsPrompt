@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.popUp {
+    width: 600px;
+    padding: 16px;
+}
+
+.optionsPage {
+    padding: 16px;
+    /* center elements but leave no space at top */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gptResponse {
+    font-size: 16px;
+}
+
+#PROMPT_TEMPLATE {
+    width: 500px;
+    height: 200px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
